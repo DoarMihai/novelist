@@ -1,0 +1,54 @@
+{
+    "name": "invataprogramare/novelist",
+    "description": "A blog package for laravel that gives you posts, categories and comments.",
+    "keywords": [
+        "invataprogramare",
+        "novelist"
+    ],
+    "homepage": "https://github.com/invataprogramare/novelist",
+    "license": "GPL-2.0-or-later",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Stefanescu Mihai",
+            "email": "mihai@invata-programare.ro",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "InvataProgramare\\Novelist\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "InvataProgramare\\Novelist\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "InvataProgramare\\Novelist\\NovelistServiceProvider"
+            ],
+            "aliases": {
+                "Novelist": "InvataProgramare\\Novelist\\NovelistFacade"
+            }
+        }
+    }
+}

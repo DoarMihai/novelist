@@ -69,5 +69,17 @@ class NovelistServiceProvider extends ServiceProvider
                 __DIR__ . '/../database/migrations/create_articles_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_articles_table.php'),
             ], 'migrations');
         }
+
+        if (!class_exists('CreateCommentsTable')) {
+            $this->publishes([
+                __DIR__ . '/../database/migrations/create_comments_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_comments_table.php'),
+            ], 'migrations');
+        }
+
+        if (!class_exists('CreateCategoriesTable')) {
+            $this->publishes([
+                __DIR__ . '/../database/migrations/create_categories_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_categories_table.php'),
+            ], 'migrations');
+        }
     }
 }

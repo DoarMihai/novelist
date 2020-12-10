@@ -1,31 +1,10 @@
-# Very short description of the package
-
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/invataprogramare/novelist.svg?style=flat-square)](https://packagist.org/packages/invataprogramare/novelist)
-[![Build Status](https://img.shields.io/travis/invataprogramare/novelist/master.svg?style=flat-square)](https://travis-ci.org/invataprogramare/novelist)
-[![Quality Score](https://img.shields.io/scrutinizer/g/invataprogramare/novelist.svg?style=flat-square)](https://scrutinizer-ci.com/g/invataprogramare/novelist)
-[![Total Downloads](https://img.shields.io/packagist/dt/invataprogramare/novelist.svg?style=flat-square)](https://packagist.org/packages/invataprogramare/novelist)
+# A tiny blog package
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
 
 ## Installation
 
-You can install the package via composer:
-
-```bash
-composer require invataprogramare/novelist
-```
-
-## Usage
-
-``` php
-// Usage description here
-```
-
-### Testing
-
-``` bash
-composer test
-```
+The usage and instalation info will be provided as soon as a the software will be on an early stage of functionality, at the moment I'm still working on it.
 
 ### Changelog
 
@@ -43,10 +22,6 @@ If you discover any security related issues, please email mihai@invata-programar
 
 - [Stefanescu Mihai](https://github.com/invataprogramare)
 - [All Contributors](../../contributors)
-
-## License
-
-The GNU GPLv3. Please see [License File](LICENSE.md) for more information.
 
 ## Laravel Package Boilerplate
 

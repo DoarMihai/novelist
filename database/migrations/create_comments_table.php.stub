@@ -19,6 +19,7 @@ class CreateCommentsTable extends Migration
             $table->string('email');
             $table->string('website');
             $table->text('content');
+            $table->integer('article_id')->unsigned();
             $table->timestamps();
         });
     }

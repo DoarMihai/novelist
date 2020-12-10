@@ -13,13 +13,13 @@ class ArticleController extends Controller
     {
         $articles = Article::paginate(config('perPage'));
 
-        return view('article.index', compact('articles'));
+        return view('novelist::article.index', compact('articles'));
     }
 
     public function show(string $slug)
     {
         $article = Article::where('slug', $slug)->firstOrFail();
 
-        return view('');
+        return view('novelist::article.show', compact('article'));
     }
 }

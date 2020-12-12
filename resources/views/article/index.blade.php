@@ -1,4 +1,7 @@
+@extends(config('novelist.default_theme'))
 
-@foreach($articles as $article)
-    {{ $article->name }}
-@endforeach
+@section('content')
+    @foreach($articles as $article)
+        {{ $article->name }}
+    @endforeach
+@endsection

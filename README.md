@@ -4,7 +4,33 @@ This is where your description should go. Try and limit it to a paragraph or two
 
 ## Installation
 
-The usage and instalation info will be provided as soon as a the software will be on an early stage of functionality, at the moment I'm still working on it.
+````
+composer require invataprogramare/novelist
+````
+
+#### Publishing the config
+
+````
+php artisan vendor:publish --provider="Invataprogramare\Novelist\NovelistServiceProvider" --tag="config"
+````
+
+#### Publishing the migrations
+
+````
+php artisan vendor:publish --provider="Invataprogramare\Novelist\NovelistServiceProvider" --tag="migrations"
+````
+
+#### Publishing the views
+
+````
+php artisan vendor:publish --provider="Invataprogramare\Novelist\NovelistServiceProvider" --tag="views"
+````
+
+#### Publishing the assets
+
+````
+php artisan vendor:publish --provider="Invataprogramare\Novelist\NovelistServiceProvider" --tag="assets"
+````
 
 ### Changelog
 

@@ -4,5 +4,6 @@
  * You can place your custom package configuration in here.
  */
 return [
-    'perPage' => 15,
+    'default_theme' => 'layouts.app',
+    'per_page' => 15,
 ];

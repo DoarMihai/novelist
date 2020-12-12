@@ -11,15 +11,14 @@ class NovelistServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        /*
-         * Optional methods to load your package assets
-         */
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'novelist');
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'novelist');
 
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
         $this->loadRoutesFrom(__DIR__.'/routes.php');
+
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'novelist');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
@@ -29,14 +28,14 @@ class NovelistServiceProvider extends ServiceProvider
             $this->publishMigrations();
 
             // Publishing the views.
-            /*$this->publishes([
+            $this->publishes([
                 __DIR__.'/../resources/views' => resource_path('views/vendor/novelist'),
-            ], 'views');*/
+            ], 'views');
 
             // Publishing assets.
-            /*$this->publishes([
+            $this->publishes([
                 __DIR__.'/../resources/assets' => public_path('vendor/novelist'),
-            ], 'assets');*/
+            ], 'assets');
 
             // Publishing the translation files.
             /*$this->publishes([
@@ -64,22 +63,16 @@ class NovelistServiceProvider extends ServiceProvider
 
     private function publishMigrations()
     {
-        if (!class_exists('CreateArticlesTable')) {
-            $this->publishes([
-                __DIR__ . '/../database/migrations/create_articles_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_articles_table.php'),
-            ], 'migrations');
-        }
+        $this->publishes([
+            __DIR__ . '/../database/migrations/create_articles_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_articles_table.php'),
+        ], 'migrations');
 
-        if (!class_exists('CreateCommentsTable')) {
-            $this->publishes([
-                __DIR__ . '/../database/migrations/create_comments_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_comments_table.php'),
-            ], 'migrations');
-        }
+        $this->publishes([
+            __DIR__ . '/../database/migrations/create_comments_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_comments_table.php'),
+        ], 'migrations');
 
-        if (!class_exists('CreateCategoriesTable')) {
-            $this->publishes([
-                __DIR__ . '/../database/migrations/create_categories_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_categories_table.php'),
-            ], 'migrations');
-        }
+        $this->publishes([
+            __DIR__ . '/../database/migrations/create_categories_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_categories_table.php'),
+        ], 'migrations');
     }
 }
